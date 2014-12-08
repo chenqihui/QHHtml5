@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>table标签</title>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+</head>
+<body>
+	<button onclick="show1()">show</button> 
+	<button onclick="show2()">show2</button> 
+	<table>
+		<tr>
+			<td>title</td>
+			<td>singer</td>
+		</tr>
+		<tr>
+			<td>情非得已</td>
+			<td>庾澄庆</td>
+		</tr>
+		<tr>
+			<td>猫步乱舞</td>
+			<td>AOA</td>
+		</tr>
+	</table>
+	<hr>
+	<table id="showTable" title="hehe">
+		<tr>
+			<td>title</td>
+		</tr>
+		<tr>
+			<td>情非得已</td>
+		</tr>
+		<tr>
+			<td>猫步乱舞</td>
+		</tr>
+	</table>
+	<div id="div1"></div>
+</body>
+<script type="text/javascript">
+	var showtable = document.getElementById("showTable");
+	function show2 () 
+	{
+		// body...
+		alert(showtable);
+		// showtable.insertRow(0);
+		// document.write("Hello World")
+	}
+	function show1 () 
+	{
+		// showtable.tr.td.html("<tr><td>hello</td></tr>");
+		// showtable.appendChild("<tr><td>hello</td></tr>");
+		// showtable.insertRow(0);
+		// alert(showtable.title);
+		// alert(showtable.tr[0].td[0].text);
+		// showtable.tr[0].innerHTML="<tr><td>" + "hello" + "</td></tr>";
+		//showtable.tr[0].innerHTML="<td>" + "hello" + "</td>";
+        
+        var arData = new Array("George","John","Thomas");
+        for (i = 0; i < 3; i++)
+        {
+            // alert(arData[i]);
+            var para=document.createElement("tr");
+            var para1=document.createElement("td");
+			var node=document.createTextNode(arData[i]);
+			para1.appendChild(node);
+			para.appendChild(para1);
+
+			var element=document.getElementById("div1");
+			showtable.appendChild(para);
+            // showtable.innerHTML=obj.innerHTML+"<tr><td>" + arData[i] + "</td></tr>";
+        }
+	}
+	show1();
+</script>
+</html>

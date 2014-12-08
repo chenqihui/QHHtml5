@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>audio标签</title>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+</head>
+<body>
+	<button onclick="playPause()">播放/暂停</button> 
+	<button onclick="makeBig()">大</button>
+	<button onclick="makeNormal()">中</button>
+	<button onclick="makeSmall()">小</button>
+	<br/>
+	<audio di="audio1" controls="controls" loop="loop" autoplay="autoplay">
+		<source src="../source/情非得已.mp3" type="audio/mp3"/>
+	</audio>
+</body>
+<script type="text/javascript">
+	var myAudio = document.getElementById("audio1");
+</script> 
+</script>
+</html>
